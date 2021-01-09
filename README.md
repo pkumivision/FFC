@@ -29,11 +29,10 @@ python main.py -a ffc_resnet50 --lfu --resume PATH/TO/CHECKPOINT [imagenet-folde
 ## Citation
 If you find this work or code is helpful in your research, please cite:
 ````
-@InProceedings{Chi_2020_CVPR,
-  author = {Chi, Lu and Yuan, Zehuan and Mu, Yadong and Wang, Changhu},
-  title = {Non-Local Neural Networks With Grouped Bilinear Attentional Transforms},
-  booktitle = {The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  month = {June},
+@InProceedings{Chi_2020_FFC,
+  author = {Chi, Lu and Jiang, Borui and Mu, Yadong},
+  title = {Fast Fourier Convolution},
+  booktitle = {Advances in Neural Information Processing Systems},
   year = {2020}
 }
 ````
