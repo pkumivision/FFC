@@ -2,6 +2,14 @@
 
 This is the official code of [Fast Fourier Convolution](https://papers.nips.cc/paper/2020/hash/2fd5d41ec6cfab47e32164d5624269b1-Abstract.html) for image classification on ImageNet.
 
+## Main Results
+### Results on ImageNet
+| Method | GFLOPs | #Params | Top-1 Acc |
+|---|---|---|---|
+| ResNet-50 | 4.1 | 25.6 | 76.3 |
+| FFC-ResNet-50 | 4.2 | 26.1 | 77.6 |
+| FFC-ResNet-50 (+LFU) | 4.3 | 26.7 | 77.8|
+
 ## Quick starts
 ### Requirements
 
