@@ -41,7 +41,7 @@ class BasicBlock(nn.Module):
         id_l, id_g = x if self.downsample is None else self.downsample(x)
 
         x = self.conv1(x)
-        x_l, x_g = self.conv2(x)
+        x = self.conv2(x)
         x_l, x_g = self.se_block(x)
 
         x_l = self.relu_l(x_l + id_l)
