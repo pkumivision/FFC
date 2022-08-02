@@ -51,7 +51,7 @@ class FourierUnit(nn.Module):
         r_size = x.size()
 
         # (batch, c, h, w/2+1, 2)
-        ffted = torch.rfft(x, signal_ndim=2, normalized=True)
+        ffted = torch.fft.rfft(x, signal_ndim=2, normalized=True)
         # (batch, c, 2, h, w/2+1)
         ffted = ffted.permute(0, 1, 4, 2, 3).contiguous()
         ffted = ffted.view((batch, -1,) + ffted.size()[3:])
@@ -62,7 +62,7 @@ class FourierUnit(nn.Module):
         ffted = ffted.view((batch, -1, 2,) + ffted.size()[2:]).permute(
             0, 1, 3, 4, 2).contiguous()  # (batch,c, t, h, w/2+1, 2)
 
-        output = torch.irfft(ffted, signal_ndim=2,
+        output = torch.fft.irfft(ffted, signal_ndim=2,
                              signal_sizes=r_size[2:], normalized=True)
 
         return output
